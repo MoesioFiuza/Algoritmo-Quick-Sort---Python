@@ -16,11 +16,11 @@ def particionar(dados, inicio, fim, atualizar_grafico_func):
             i += 1
             dados[i], dados[j] = dados[j], dados[i]
             cores[i], cores[j] = 'purple', 'purple'
-            yield dados, cores  # yield the current state
+            yield dados, cores 
             cores[i], cores[j] = 'maroon', 'maroon'
 
     dados[i + 1], dados[fim] = dados[fim], dados[i + 1]
-    yield dados, ['maroon'] * len(dados)  # yield the final state
+    yield dados, ['maroon'] * len(dados)  
 
 def quick_sort(dados, inicio, fim, atualizar_grafico_func):
     if inicio < fim:
